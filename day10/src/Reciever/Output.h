@@ -8,9 +8,6 @@ using namespace std;
 
 class Output: Reciever {
   public:
-    int id;
-    int value = 0;
-
     Output(int id)
       : id(id)
     {}
@@ -21,6 +18,12 @@ class Output: Reciever {
       }
       this->value = chip;
     }
+
+    int getValue() {
+      return this->value;
+    }
+  private:
+    int id, value = 0;
 };
 
 #endif

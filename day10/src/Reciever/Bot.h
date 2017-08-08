@@ -17,10 +17,8 @@ class Bot: public Reciever {
     void addInstruction(GiveInstruction* instruction);
     void transferChips(Reciever* lowTarget, Reciever* highTarget);
   private:
-    int id;
-    int low = 0, high = 0;
+    int id, low = 0, high = 0;
     queue<GiveInstruction*> instructions;
-
     void executeInstruction();
 };
 

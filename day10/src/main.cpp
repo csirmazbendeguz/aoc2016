@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     Output* o1 = factory.getOutput(1);
     Output* o2 = factory.getOutput(2);
 
-    int multiplied = o0->value * o1->value * o2->value;
+    int multiplied = o0->getValue() * o1->getValue() * o2->getValue();
     cout << multiplied << endl;
   }
   catch(const exception& e) {
