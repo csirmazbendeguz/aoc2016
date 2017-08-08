@@ -11,15 +11,14 @@ class Reciever;
 
 class GiveInstruction {
   public:
-    Bot* source;
-    Reciever* lowTarget;
-    Reciever* highTarget;
-
     GiveInstruction(Bot* source, Reciever* lowTarget, Reciever* highTarget)
       : source(source), lowTarget(lowTarget), highTarget(highTarget)
     {}
-
     void execute();
+  private:
+    Bot* source;
+    Reciever* lowTarget;
+    Reciever* highTarget;
 };
 
 #endif
