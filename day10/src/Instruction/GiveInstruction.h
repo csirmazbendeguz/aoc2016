@@ -1,7 +1,7 @@
 #ifndef __GIVEINSTRUCTION_H_INCLUDED__
 #define __GIVEINSTRUCTION_H_INCLUDED__
 
-#include "Instruction.h"
+#include "../Reciever/Reciever.h"
 #include "../Reciever/Bot.h"
 
 using namespace std;
@@ -9,7 +9,7 @@ using namespace std;
 class Bot;
 class Reciever;
 
-class GiveInstruction: public Instruction {
+class GiveInstruction {
   public:
     Bot* source;
     Reciever* lowTarget;

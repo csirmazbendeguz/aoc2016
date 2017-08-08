@@ -2,7 +2,6 @@
 #define __OUTPUT_H_INCLUDED__
 
 #include <exception>
-
 #include "Reciever.h"
 
 using namespace std;

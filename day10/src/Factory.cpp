@@ -11,8 +11,7 @@ Factory::Factory(vector<string>* lines) {
       int value = stoi(valueMatches[1].str());
       int botId = stoi(valueMatches[2].str());
       Bot* bot = this->getBot(botId);
-      ValueInstruction instruction(value, bot);
-      instruction.execute();
+      bot->addChip(value);
     } else if (regex_search(line, giveMatches, giveInstruction)) {
       int botId = stoi(giveMatches[1].str());
       string lowTargetType = giveMatches[2].str();

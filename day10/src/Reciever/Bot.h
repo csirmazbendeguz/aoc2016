@@ -3,7 +3,6 @@
 
 #include <queue>
 #include <iostream>
-
 #include "Reciever.h"
 #include "../Instruction/GiveInstruction.h"
 
@@ -13,15 +12,15 @@ class GiveInstruction;
 
 class Bot: public Reciever {
   public:
-    int id;
-    queue<GiveInstruction*> instructions;
-    int low = 0;
-    int high = 0;
-
     Bot(int id): id(id) {};
     void addChip(int chip);
     void addInstruction(GiveInstruction* instruction);
     void transferChips(Reciever* lowTarget, Reciever* highTarget);
+  private:
+    int id;
+    int low = 0, high = 0;
+    queue<GiveInstruction*> instructions;
+
     void executeInstruction();
 };
 
